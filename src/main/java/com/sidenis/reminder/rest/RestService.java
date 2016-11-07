@@ -1,4 +1,4 @@
-package com.sidenis.rest;
+package com.sidenis.reminder.rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -8,15 +8,14 @@ import javax.ws.rs.core.Response;
 /**
  * Created by Mirza.Aliev on 11/3/2016.
  */
-@Path("/hello")
-public class HelloWorldService {
+@Path("/")
+public class RestService {
 
     @GET
     @Path("/{param}")
     public Response getMsg(@PathParam("param") String msg) {
 
         String output = "Jersey say : " + msg;
-
         return Response.status(200).entity(output).build();
 
     }
