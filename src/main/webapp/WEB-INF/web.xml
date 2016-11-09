@@ -6,7 +6,8 @@
 
   <display-name>Archetype Created Web Application</display-name>
 
-  <servlet>
+<!--
+   <servlet>
     <servlet-name>jersey-serlvet</servlet-name>
     <servlet-class>
       com.sun.jersey.spi.container.servlet.ServletContainer
@@ -15,12 +16,17 @@
       <param-name>com.sun.jersey.config.property.packages</param-name>
       <param-value>com.sidenis.reminder</param-value>
     </init-param>
-    <load-on-startup>1</load-on-startup>
+    <load-on-startup>0</load-on-startup>
   </servlet>
 
   <servlet-mapping>
     <servlet-name>jersey-serlvet</servlet-name>
     <url-pattern>/rest/*</url-pattern>
   </servlet-mapping>
+-->
+
+  <welcome-file-list>
+      <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
 
 </web-app>

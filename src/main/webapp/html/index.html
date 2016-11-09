@@ -11,25 +11,46 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>jQuery UI Draggable - Default functionality</title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <title>jQuery Default functionality</title>
     <style>
         #draggable { width: 150px; height: 150px; padding: 0.5em; }
     </style>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/Main.js"></script>
+    <script src="../js/ReminderView.js"></script>
+    <script src="../js/ReminderModel.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        $( function() {
-            $( "#draggable" ).draggable();
-        } );
-    </script>
+
 </head>
+
+
+
 <body>
 
-<div id="draggable" class="ui-widget-content">
-    <p>Drag me around</p>
+<div >
+    Enter name :<br>
+    <input id="input_Name" type="text" ><br>
+    Enter surname:<br>
+    <input id="input_Surname" type="text" ><br>
+    Select country:<br>
+    <select id="countries">
+
+    </select>
+    <br><br>
+    <input id="submitBtn" type="submit">
+    <p id="output">
+
+    </p>
+
+
 </div>
+
+
+<script>
+    $(document).ready(function () {
+        mainModel.init();
+    })
+</script>
 
 
 </body>

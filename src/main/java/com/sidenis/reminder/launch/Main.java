@@ -36,7 +36,7 @@ public class Main {
         WebResourceRoot resources = new StandardRoot(ctx);
         resources.addPreResources(new DirResourceSet(resources, "/WEB-INF/classes",
                 additionWebInfClasses.getAbsolutePath(), "/"));
-
+        //ctx.addWelcomeFile("/index.jsp");
         ctx.setResources(resources);
         tomcat.start();
         tomcat.getServer().await();
