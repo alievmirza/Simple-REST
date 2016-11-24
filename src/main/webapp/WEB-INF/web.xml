@@ -6,8 +6,41 @@
 
   <display-name>Archetype Created Web Application</display-name>
 
+    <context-param>
+        <param-name>contextClass</param-name>
+        <param-value>
+            org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+        </param-value>
+    </context-param>
+
+
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>com.sidenis.reminder.spring.MainConfig</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+
 <!--
-   <servlet>
+    <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern
+    >/</url-pattern>
+        </servlet-mapping>
+-->
+
+
+  <servlet>
     <servlet-name>jersey-serlvet</servlet-name>
     <servlet-class>
       com.sun.jersey.spi.container.servlet.ServletContainer
@@ -23,10 +56,12 @@
     <servlet-name>jersey-serlvet</servlet-name>
     <url-pattern>/rest/*</url-pattern>
   </servlet-mapping>
--->
 
-  <welcome-file-list>
-      <welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>
+
+
+
+
+
+
 
 </web-app>
